@@ -1,4 +1,4 @@
-export const runtime = 'nodejs';
+
 import { NextResponse } from 'next/server';
 import { verifyAuth } from '@/lib/auth.js';
 import { Invoice, InvoiceItem } from '@/models/Invoice.js';

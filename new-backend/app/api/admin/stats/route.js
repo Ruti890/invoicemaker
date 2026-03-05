@@ -1,4 +1,4 @@
-export const runtime = 'nodejs';
+
 import { NextResponse } from 'next/server';
 import { verifyAdmin } from '@/lib/auth.js';
 import User from '@/models/User.js';
