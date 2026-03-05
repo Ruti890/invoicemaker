@@ -38,3 +38,7 @@ export async function POST(request) {
         return NextResponse.json({ msg: 'Server error' }, { status: 500 });
     }
 }
+
+export async function OPTIONS() {
+    return NextResponse.json({}, { status: 200 });
+}

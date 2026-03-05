@@ -30,3 +30,7 @@ export async function POST() {
     });
     return response;
 }
+
+export async function OPTIONS() {
+    return NextResponse.json({}, { status: 200 });
+}
