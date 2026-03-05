@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    // These packages use native Node.js modules and must NOT be bundled by Next.js/Turbopack
-    serverExternalPackages: ['sequelize', 'pg', 'pg-hstore', 'bcryptjs', 'jsonwebtoken', 'pdfkit'],
+    experimental: {
+        serverComponentsExternalPackages: ['sequelize', 'pg', 'pg-hstore', 'bcryptjs', 'jsonwebtoken', 'pdfkit'],
+    },
 
     // CORS Headers for the local frontend (Vite runs on port 5173 by default)
     async headers() {
