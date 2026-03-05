@@ -28,8 +28,15 @@ let initialized = false;
 
 export async function initDB() {
     if (!initialized) {
-        await sequelize.sync();
-        initialized = true;
+        try {
+            await sequelize.authenticate();
+            console.log('Database connection has been established successfully.');
+            await sequelize.sync();
+            initialized = true;
+        } catch (error) {
+            console.error('Unable to connect to the database:', error);
+            throw error;
+        }
     }
 }
 
